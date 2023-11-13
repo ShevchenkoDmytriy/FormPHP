@@ -6,9 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         "music" => $music,
         "season" => $season,
     ];
-    $existingData = file_exists("survey_results.json") ? json_decode(file_get_contents("survey_results.json"), true) : [];
+    $existingData = file_exists("results.json") ? json_decode(file_get_contents("results.json"), true) : [];
     $existingData[] = $data;
-    file_put_contents("survey_results.json", json_encode($existingData));
+    file_put_contents("results.json", json_encode($existingData));
 }
 ?>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <h1>Результати опитування</h1>
     <?php
-    $results = file_exists("survey_results.json") ? json_decode(file_get_contents("survey_results.json"), true) : [];
+    $results = file_exists("results.json") ? json_decode(file_get_contents("results.json"), true) : [];
     if (!empty($results)) {
         echo "<table>";
         echo "<tr><th>Музика</th><th>Время года</th></tr>";
