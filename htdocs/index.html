@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос</title>
+</head>
+<body>
+    <form action="pinfo.php" method="post">
+        <p>Какую музыку вы предпочитаете?</p>
+        <label><input type="checkbox" name="music[]" value="pop"> Поп</label><br>
+        <label><input type="checkbox" name="music[]" value="rock"> Рок</label><br>
+        <label><input type="checkbox" name="music[]" value="jazz"> Джаз</label><br>
+        <label><input type="checkbox" name="music[]" value="classical"> Классическая</label><br>
+
+        <p>Ваше любимое время года?</p>
+        <label><input type="checkbox" name="season[]" value="spring"> Весна</label><br>
+        <label><input type="checkbox" name="season[]" value="summer"> Лето</label><br>
+        <label><input type="checkbox" name="season[]" value="autumn"> Осень</label><br>
+        <label><input type="checkbox" name="season[]" value="winter"> Зима</label><br>
+
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
